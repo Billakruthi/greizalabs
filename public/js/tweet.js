@@ -8,15 +8,9 @@ var twitterObject = new Twit(config);
 
 var params = {
     q: '#FlyDubai',
-    count: 200,
+    count: 2,
     lang:'en',
-
 };
-
-
-var os = require("os");
-var fs = require("fs");
-
 
 
 //get request 1. what to do, 2. what are  parameters( query , how many in count), callback function as gotData

@@ -24,7 +24,7 @@ app.get('/', function (req, res) {
   res.send('world!');
 });
 
-var port = process.env.PORT||3000; //which you can run both on Azure or local
+var port = process.env.PORT||2000; //which you can run both on Azure or local
 
 app.listen(port);
 
