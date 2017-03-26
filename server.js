@@ -22,10 +22,10 @@ app.get('/', function (req, res) {
   res.send('world!');
 });
 
-// var port = process.env.PORT||3000; //which you can run both on Azure or local
+var port = process.env.PORT||3000; //which you can run both on Azure or local
 
-// app.listen(port);
+app.listen(port);
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
-})
+// app.listen(3000, function () {
+//   console.log('Example app listening on port 3000!')
+// })
