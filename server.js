@@ -1,8 +1,10 @@
 var express = require("express");
 // var http = require('http');
 var app = express();
+var path = require("path");
 // var request = require('request');
-// var path = require("path");
+
+app.use('/static', express.static(__dirname + '/public'));
 
 
 // var bodyParser = require('body-parser');

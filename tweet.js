@@ -4,7 +4,7 @@ var config = require('./twitter-config');
 
 //get the tweets
 
-var T = new Twit(config);
+var twitterObject = new Twit(config);
 
 var params = {
     q: '#FlyDubai',
@@ -21,7 +21,7 @@ var fs = require("fs");
 
 //get request 1. what to do, 2. what are  parameters( query , how many in count), callback function as gotData
 
-T.get('search/tweets', params, gotData);
+twitterObject.get('search/tweets', params, gotData);
 
 function gotData(err, data, response) {
 
@@ -57,16 +57,3 @@ function gotData(err, data, response) {
     // };
 
 };
-
-
-function processInput ( text ) 
-{     
-    var underline = "==============================================================================================";
-  fs.open('log.txt', 'a', 666, function( e, id ) {
-   fs.write( id, text + os.EOL+underline+os.EOL, null, 'utf8', function(){
-    fs.close(id, function(){
-     console.log('file is updated');
-    });
-   });
-  });
- };
